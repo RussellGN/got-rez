@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+		<title>Students Accomodation</title>
+
+		<link
+			href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+			rel="stylesheet"
+		/>
+
+		<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+
+		<link href="assets/css/style.css" rel="stylesheet" />
+
+		<script defer src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script defer src="assets/js/main.js"></script>
+	</head>
+
+	<style>
+		.c-rounded-1 {
+			border-radius: 10px;
+		}
+		.c-rounded-2 {
+			border-radius: 20px;
+		}
+		.c-rounded-3 {
+			border-radius: 30px;
+		}
+		.btn-carousel {
+			/* btn-dark rounded-circle position-absolute top-custom end-0 */
+			position: absolute;
+			top: 30%;
+			background-color: rgba(0, 0, 0, 0.3);
+			color: white;
+			margin: 0.8rem;
+			border: 0;
+			padding: 0.2rem;
+		}
+		#desktop-hero .btn-carousel {
+			position: static !important;
+			height: fit-content;
+			margin: auto 0;
+			padding: 1rem;
+			border-radius: 100%;
+			background-color: rgb(46, 47, 52);
+		}
+		* {
+			font-family: cursive !important;
+		}
+		.text-inherit {
+			color: inherit !important;
+		}
+		.opener {
+			/* margin: 2.5rem 0 2rem 0; */
+			position: relative;
+		}
+		.opener::after {
+			content: "";
+			position: absolute;
+			bottom: -15px;
+			width: 9rem;
+			left: 50%;
+			transform: translateX(-50%);
+			height: 5px;
+			background: linear-gradient(to right, goldenrod, aqua);
+			border-radius: 1rem;
+		}
+		.carousel-indicators li {
+			border: 0 !important;
+			border-radius: 100%;
+			height: 1rem !important;
+			width: 1rem !important;
+		}
+	</style>
+
+	<body>
+		<div class="invisible-items">
+			<div id="preloader"></div>
+
+			<div id="mobile-nav">
+				<button id="close-nav" class="btn">
+					<i class="bi bi-x fs-1 m-2"></i>
+				</button>
+				<a href="./index.html" class="text-decoration-underline">Home</a>
+				<a href="./accomodation.html">Browse Accomodation</a>
+				<a href="./about.html">About</a>
+				<a href="./contact">Get In Touch</a>
+			</div>
+
+			<a href="#" class="back-to-top d-flex align-items-center justify-content-center"
+				><i class="bi bi-arrow-up-short"></i
+			></a>
+		</div>
+
+		<header class="sticky-top d-flex text-white bg-primary">
+			<div class="container">
+				<div class="p-3 d-flex justify-content-between align-items-center">
+					<a href="./index.html" class="text-inherit">
+						<h4 class="">
+							<i class="bi bi-house"></i>
+							<span>G</span>ot<span>R</span>ez
+						</h4>
+					</a>
+
+					<button id="open-nav" type="button" class="btn btn-light rounded-circle shadow">
+						<i class="bi bi-list fs-5"></i>
+					</button>
+				</div>
+			</div>
+		</header>
+
+		<div class="position-relative">
+			<div id="desktop-hero" class="d-none d-lg-block bg-primary py-5">
+				<div class="row justify-content-center py-5 align-items-center">
+					<div class="col-auto me-5">
+						<div class="text-center text-white">
+							<h1 class="opener pt-5 mb-5">Didn't get Rez?</h1>
+							<p class="mx-auto lead" style="max-width: 30rem">
+								We got you! Browse and filter
+								<span class="text-warning fw-bolder">50+</span> Boarding houses and
+								apartments available exclusively to students in Harare 😇
+							</p>
+							<div class="text-center">
+								<a
+									href="./accomodation.html"
+									class="btn btn-outline-light px-4 rounded-pill mt-3"
+								>
+									Browse Accomodation<i class="bi bi-arrow-right ms-2"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-4">
+						<div
+							id="generalCarousel1"
+							class="carousel slide general-carousel"
+							data-bs-ride="carousel"
+						>
+							<div class="d-flex">
+								<button
+									class="btn-carousel start-0"
+									type="button"
+									data-bs-target="#generalCarousel1"
+									data-bs-slide="prev"
+								>
+									<i class="bi bi-chevron-double-left"></i>
+								</button>
+
+								<div class="carousel-inner" role="listbox">
+									<div class="carousel-item p-2 active">
+										<div class="border bg-light" style="border-radius: 20px">
+											<div class="d-flex">
+												<div class="w-50">
+													<img
+														src="./assets/img/boarding-houses/bh4.jpg"
+														class="h-100 w-100 border border-2 border-white"
+														style="
+															object-fit: cover;
+															border-radius: 20px 0 0 0;
+														"
+													/>
+												</div>
+
+												<div class="w-50 d-flex flex-wrap h-100">
+													<div class="col-6 p-0">
+														<img
+															src="./assets/img/boarding-houses/bh9.jpg"
+															class="h-100 w-100 border border-2 border-white"
+															style="object-fit: cover"
+														/>
+													</div>
+													<div class="col-6 p-0">
+														<img
+															src="./assets/img/boarding-houses/bh6.jpg"
+															class="h-100 w-100 border border-2 border-white"
+															style="
+																object-fit: cover;
+																border-radius: 0 20px 0 0;
+															"
+														/>
+													</div>
+													<div class="col-6 p-0">
+														<img
+															src="./assets/img/boarding-houses/bh7.jpg"
+															class="h-100 w-100 border border-2 border-white"
+															style="object-fit: cover"
+														/>
+													</div>
+													<div class="col-6 p-0">
+														<img
+															src="./assets/img/boarding-houses/bh10.jpg"
+															class="h-100 w-100 border border-2 border-white"
+															style="object-fit: cover"
+														/>
+													</div>
+												</div>
+											</div>
+
+											<div
+												class="p-3 d-flex align-items-start justify-content-between"
+											>
+												<div>
+													<div class="mb-3">
+														<i class="bi bi-geo-alt"></i> Mount Pleasant
+														Heights
+													</div>
+													<div class="mb-3">
+														<i class="bi bi-geo"></i> 5km to UZ
+													</div>
+													<div class="">
+														<i class="bi bi-currency-dollar"></i>
+														120/month
+													</div>
+												</div>
+
+												<div>
+													<a
+														href="./view.html"
+														class="btn btn-primary rounded-pill"
+														>View</a
+													>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="carousel-item p-2">
+										<div class="border bg-light" style="border-radius: 20px">
+											<div class="d-flex">
+												<div class="w-50">
+													<img
+														src="./assets/img/boarding-houses/bh4.jpg"
+														class="h-100 w-100 border border-2 border-white"
+														style="
+															object-fit: cover;
+															border-radius: 20px 0 0 0;
+														"
+													/>
+												</div>
+
+												<div class="w-50 d-flex flex-wrap h-100">
+													<div class="col-6 p-0">
+														<img
+															src="./assets/img/boarding-houses/bh9.jpg"
+															class="h-100 w-100 border border-2 border-white"
+															style="object-fit: cover"
+														/>
+													</div>
+													<div class="col-6 p-0">
+														<img
+															src="./assets/img/boarding-houses/bh6.jpg"
+															class="h-100 w-100 border border-2 border-white"
+															style="
+																object-fit: cover;
+																border-radius: 0 20px 0 0;
+															"
+														/>
+													</div>
+													<div class="col-6 p-0">
+														<img
+															src="./assets/img/boarding-houses/bh7.jpg"
+															class="h-100 w-100 border border-2 border-white"
+															style="object-fit: cover"
+														/>
+													</div>
+													<div class="col-6 p-0">
+														<img
+															src="./assets/img/boarding-houses/bh10.jpg"
+															class="h-100 w-100 border border-2 border-white"
+															style="object-fit: cover"
+														/>
+													</div>
+												</div>
+											</div>
+
+											<div
+												class="p-3 d-flex align-items-start justify-content-between"
+											>
+												<div>
+													<div class="mb-3">
+														<i class="bi bi-geo-alt"></i> Mount Pleasant
+														Heights
+													</div>
+													<div class="mb-3">
+														<i class="bi bi-geo"></i> 5km to UZ
+													</div>
+													<div class="">
+														<i class="bi bi-currency-dollar"></i>
+														120/month
+													</div>
+												</div>
+
+												<div>
+													<a
+														href="./view.html"
+														class="btn btn-primary rounded-pill"
+														>View</a
+													>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="carousel-item p-2">
+										<div class="border bg-light" style="border-radius: 20px">
+											<div class="d-flex">
+												<div class="w-50">
+													<img
+														src="./assets/img/boarding-houses/bh4.jpg"
+														class="h-100 w-100 border border-2 border-white"
+														style="
+															object-fit: cover;
+															border-radius: 20px 0 0 0;
+														"
+													/>
+												</div>
+
+												<div class="w-50 d-flex flex-wrap h-100">
+													<div class="col-6 p-0">
+														<img
+															src="./assets/img/boarding-houses/bh9.jpg"
+															class="h-100 w-100 border border-2 border-white"
+															style="object-fit: cover"
+														/>
+													</div>
+													<div class="col-6 p-0">
+														<img
+															src="./assets/img/boarding-houses/bh6.jpg"
+															class="h-100 w-100 border border-2 border-white"
+															style="
+																object-fit: cover;
+																border-radius: 0 20px 0 0;
+															"
+														/>
+													</div>
+													<div class="col-6 p-0">
+														<img
+															src="./assets/img/boarding-houses/bh7.jpg"
+															class="h-100 w-100 border border-2 border-white"
+															style="object-fit: cover"
+														/>
+													</div>
+													<div class="col-6 p-0">
+														<img
+															src="./assets/img/boarding-houses/bh10.jpg"
+															class="h-100 w-100 border border-2 border-white"
+															style="object-fit: cover"
+														/>
+													</div>
+												</div>
+											</div>
+
+											<div
+												class="p-3 d-flex align-items-start justify-content-between"
+											>
+												<div>
+													<div class="mb-3">
+														<i class="bi bi-geo-alt"></i> Mount Pleasant
+														Heights
+													</div>
+													<div class="mb-3">
+														<i class="bi bi-geo"></i> 5km to UZ
+													</div>
+													<div class="">
+														<i class="bi bi-currency-dollar"></i>
+														120/month
+													</div>
+												</div>
+
+												<div>
+													<a
+														href="./view.html"
+														class="btn btn-primary rounded-pill"
+														>View</a
+													>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<button
+									class="btn-carousel end-0"
+									type="button"
+									data-bs-target="#generalCarousel1"
+									data-bs-slide="next"
+								>
+									<i class="bi bi-chevron-double-right"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="mobile-hero" class="d-lg-none">
+				<div id="Hero" class="bg-primary text-white" style="height: 60vh">
+					<div class="text-center pt-5">
+						<h1 class="opener pt-5 mb-5">Didn't get Rez?</h1>
+						<p class="mx-auto" style="max-width: 20rem">
+							We got you! Browse and filter
+							<span class="text-warning fw-bolder">50+</span> Boarding houses and
+							apartments available exclusively to students in Harare 😇
+						</p>
+					</div>
+				</div>
+
+				<div
+					class="mx-auto p-1 bg-white shadow position-relative"
+					style="width: 90%; top: -10vh; border-radius: 20px"
+				>
+					<div
+						id="generalCarousel1"
+						class="carousel slide general-carousel"
+						data-bs-ride="carousel"
+					>
+						<div class="carousel-inner" role="listbox">
+							<div class="carousel-item p-2 active">
+								<div class="border bg-light" style="border-radius: 20px">
+									<div class="d-flex">
+										<div class="w-50">
+											<img
+												src="./assets/img/boarding-houses/bh4.jpg"
+												class="h-100 w-100 border border-2 border-white"
+												style="object-fit: cover; border-radius: 20px 0 0 0"
+											/>
+										</div>
+
+										<div class="w-50 d-flex flex-wrap h-100">
+											<div class="col-6 p-0">
+												<img
+													src="./assets/img/boarding-houses/bh9.jpg"
+													class="h-100 w-100 border border-2 border-white"
+													style="object-fit: cover"
+												/>
+											</div>
+											<div class="col-6 p-0">
+												<img
+													src="./assets/img/boarding-houses/bh6.jpg"
+													class="h-100 w-100 border border-2 border-white"
+													style="
+														object-fit: cover;
+														border-radius: 0 20px 0 0;
+													"
+												/>
+											</div>
+											<div class="col-6 p-0">
+												<img
+													src="./assets/img/boarding-houses/bh7.jpg"
+													class="h-100 w-100 border border-2 border-white"
+													style="object-fit: cover"
+												/>
+											</div>
+											<div class="col-6 p-0">
+												<img
+													src="./assets/img/boarding-houses/bh10.jpg"
+													class="h-100 w-100 border border-2 border-white"
+													style="object-fit: cover"
+												/>
+											</div>
+										</div>
+									</div>
+
+									<div
+										class="p-3 d-flex align-items-start justify-content-between"
+									>
+										<div>
+											<div class="mb-3">
+												<i class="bi bi-geo-alt"></i> Mount Pleasant Heights
+											</div>
+											<div class="mb-3">
+												<i class="bi bi-geo"></i> 5km to UZ
+											</div>
+											<div class="">
+												<i class="bi bi-currency-dollar"></i> 120/month
+											</div>
+										</div>
+
+										<div>
+											<a
+												href="./view.html"
+												class="btn btn-primary rounded-pill"
+												>View</a
+											>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="carousel-item p-2">
+								<div class="border bg-light" style="border-radius: 20px">
+									<div class="d-flex">
+										<div class="w-50">
+											<img
+												src="./assets/img/boarding-houses/bh4.jpg"
+												class="h-100 w-100 border border-2 border-white"
+												style="object-fit: cover; border-radius: 20px 0 0 0"
+											/>
+										</div>
+
+										<div class="w-50 d-flex flex-wrap h-100">
+											<div class="col-6 p-0">
+												<img
+													src="./assets/img/boarding-houses/bh9.jpg"
+													class="h-100 w-100 border border-2 border-white"
+													style="object-fit: cover"
+												/>
+											</div>
+											<div class="col-6 p-0">
+												<img
+													src="./assets/img/boarding-houses/bh6.jpg"
+													class="h-100 w-100 border border-2 border-white"
+													style="
+														object-fit: cover;
+														border-radius: 0 20px 0 0;
+													"
+												/>
+											</div>
+											<div class="col-6 p-0">
+												<img
+													src="./assets/img/boarding-houses/bh7.jpg"
+													class="h-100 w-100 border border-2 border-white"
+													style="object-fit: cover"
+												/>
+											</div>
+											<div class="col-6 p-0">
+												<img
+													src="./assets/img/boarding-houses/bh10.jpg"
+													class="h-100 w-100 border border-2 border-white"
+													style="object-fit: cover"
+												/>
+											</div>
+										</div>
+									</div>
+
+									<div
+										class="p-3 d-flex align-items-start justify-content-between"
+									>
+										<div>
+											<div class="mb-3">
+												<i class="bi bi-geo-alt"></i> Mount Pleasant Heights
+											</div>
+											<div class="mb-3">
+												<i class="bi bi-geo"></i> 5km to UZ
+											</div>
+											<div class="">
+												<i class="bi bi-currency-dollar"></i> 120/month
+											</div>
+										</div>
+
+										<div>
+											<a
+												href="./view.html"
+												class="btn btn-primary rounded-pill"
+												>View</a
+											>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="carousel-item p-2">
+								<div class="border bg-light" style="border-radius: 20px">
+									<div class="d-flex">
+										<div class="w-50">
+											<img
+												src="./assets/img/boarding-houses/bh4.jpg"
+												class="h-100 w-100 border border-2 border-white"
+												style="object-fit: cover; border-radius: 20px 0 0 0"
+											/>
+										</div>
+
+										<div class="w-50 d-flex flex-wrap h-100">
+											<div class="col-6 p-0">
+												<img
+													src="./assets/img/boarding-houses/bh9.jpg"
+													class="h-100 w-100 border border-2 border-white"
+													style="object-fit: cover"
+												/>
+											</div>
+											<div class="col-6 p-0">
+												<img
+													src="./assets/img/boarding-houses/bh6.jpg"
+													class="h-100 w-100 border border-2 border-white"
+													style="
+														object-fit: cover;
+														border-radius: 0 20px 0 0;
+													"
+												/>
+											</div>
+											<div class="col-6 p-0">
+												<img
+													src="./assets/img/boarding-houses/bh7.jpg"
+													class="h-100 w-100 border border-2 border-white"
+													style="object-fit: cover"
+												/>
+											</div>
+											<div class="col-6 p-0">
+												<img
+													src="./assets/img/boarding-houses/bh10.jpg"
+													class="h-100 w-100 border border-2 border-white"
+													style="object-fit: cover"
+												/>
+											</div>
+										</div>
+									</div>
+
+									<div
+										class="p-3 d-flex align-items-start justify-content-between"
+									>
+										<div>
+											<div class="mb-3">
+												<i class="bi bi-geo-alt"></i> Mount Pleasant Heights
+											</div>
+											<div class="mb-3">
+												<i class="bi bi-geo"></i> 5km to UZ
+											</div>
+											<div class="">
+												<i class="bi bi-currency-dollar"></i> 120/month
+											</div>
+										</div>
+
+										<div>
+											<a
+												href="./view.html"
+												class="btn btn-primary rounded-pill"
+												>View</a
+											>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<button
+							class="btn-carousel start-0"
+							type="button"
+							data-bs-target="#generalCarousel1"
+							data-bs-slide="prev"
+						>
+							<i class="bi bi-chevron-double-left"></i>
+						</button>
+
+						<button
+							class="btn-carousel end-0"
+							type="button"
+							data-bs-target="#generalCarousel1"
+							data-bs-slide="next"
+						>
+							<i class="bi bi-chevron-double-right"></i>
+						</button>
+					</div>
+
+					<div class="text-center">
+						<a
+							href="./accomodation.html"
+							class="btn btn-primary w-75 rounded-pill my-3"
+						>
+							Browse Accomodation<i class="bi bi-arrow-right ms-2"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="row align-items-center justify-content-center my-lg-5">
+					<div class="col-lg-5">
+						<div class="shadow-lg p-5 text-center c-rounded-2">
+							<h1 class="mb-3">Are you a landlord?</h1>
+							<p class="mx-auto" style="max-width: 20rem">
+								Create an account and advertise student accomodation for free,
+								forever. No hidden costs 😇 <br />
+								<a class="btn btn-primary rounded-pill mt-4" href="./signin.html"
+									>Get Started</a
+								>
+							</p>
+						</div>
+					</div>
+
+					<div class="col-lg-5">
+						<img src="./assets/img/canva/canva (9).svg" class="w-100" />
+					</div>
+				</div>
+
+				<div class="row align-items-center justify-content-center my-lg-5">
+					<div class="col-lg-5 order-last order-lg-first">
+						<img src="./assets/img/canva/canva (9).svg" class="w-100" />
+					</div>
+
+					<div class="col-lg-5 order-first order-lg-last">
+						<div class="shadow-lg p-5 text-center c-rounded-2">
+							<h1 class="mb-3">By the students. For the students.</h1>
+							<p class="mx-auto" style="max-width: 20rem">
+								Read about why this site was created and where you can find others
+								like it.
+
+								<br />
+								<a class="btn btn-primary rounded-pill mt-4" href="./about.html"
+									>About</a
+								>
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- <div class="row row-cols-1 my-5 row-cols-lg-2">
+					<div class="col-5 d-none d-lg-block">
+						<div class="d-flex justify-content-center align-items-center">
+							<img
+								src="./assets/img/canva/canva (9).svg"
+								class="border mt-4"
+								style="width: 25rem"
+							/>
+						</div>
+					</div>
+
+					<div class="col p-lg-5 border">
+						<div class="shadow-lg px-lg-5 c-rounded-2" style="max-width: 30rem">
+							<div id="About" class="text-center my-5 py-5">
+								<h1 class="mb-3">By the students. For the students</h1>
+								<p>
+									Read about why this site was created and where you can find
+									others like it.
+									<br />
+									<a class="btn btn-primary rounded-pill mt-4" href="./about.html"
+										>About</a
+									>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div> -->
+			</div>
+
+			<div id="CTA" class="p-4 bg-primary text-center text-white">
+				<h1 class="mb-4">You've made it this far 😇</h1>
+				<a href="./accomodation.html" class="btn btn-light rounded-pill"
+					>Browse Accomodation</a
+				>
+			</div>
+
+			<div class="p-4 bg-primary text-center text-white">
+				<small>&copy;All Rights Reserved. </small>
+			</div>
+		</div>
+	</body>
+</html>

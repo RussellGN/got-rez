@@ -1,0 +1,129 @@
+::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+::-webkit-scrollbar-track {
+	background-color: black;
+}
+::-webkit-scrollbar-thumb {
+	background-color: white;
+	border: solid black;
+	border-radius: 10px;
+}
+
+.back-to-top {
+	position: fixed;
+	visibility: hidden;
+	opacity: 0;
+	right: 15px;
+	bottom: 15px;
+	z-index: 996;
+	background: #0880e8;
+	width: 40px;
+	height: 40px;
+	border-radius: 50px;
+	transition: all 0.4s;
+}
+.back-to-top i {
+	font-size: 28px;
+	color: #fff;
+	line-height: 0;
+}
+.back-to-top:hover {
+	background: #2194f7;
+	color: #fff;
+}
+.back-to-top.active {
+	visibility: visible;
+	opacity: 1;
+}
+header {
+	transition: all 0.2s ease-in-out;
+}
+.header-scrolled {
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+#preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 9999;
+	overflow: hidden;
+	background: #fff;
+}
+
+#preloader:before {
+	content: "";
+	position: fixed;
+	top: calc(50% - 30px);
+	left: calc(50% - 30px);
+	border: 6px solid #0880e8;
+	border-top-color: #bfe0fd;
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+	-webkit-animation: animate-preloader 1s linear infinite;
+	animation: animate-preloader 1s linear infinite;
+}
+
+@-webkit-keyframes animate-preloader {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes animate-preloader {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+a {
+	text-decoration: none;
+}
+
+/* mobile-nav */
+@media screen {
+	#mobile-nav {
+		position: fixed;
+		z-index: 100000;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background: rgba(0, 0, 0, 0.9);
+		opacity: 0;
+		transition: all 0.3s;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		transform: translateY(100%);
+	}
+	#mobile-nav.open-nav {
+		transform: translateY(0);
+		opacity: 1;
+	}
+	#mobile-nav button {
+		color: white !important;
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+	#mobile-nav a {
+		color: white;
+		padding: 0.3rem;
+	}
+}
+body {
+	overflow-x: hidden;
+}
