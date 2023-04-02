@@ -4,15 +4,19 @@
 		<meta charset="utf-8" />
 		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-		<title>Students Accomodation</title>
+		<title>Off-Campus</title>
 
-		<link
+		<!-- <link
 			href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
 			rel="stylesheet"
+		/> -->
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap"
+			rel="stylesheet"
 		/>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
 
 		<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 		<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
@@ -23,86 +27,7 @@
 		<script defer src="assets/js/main.js"></script>
 	</head>
 
-	<style>
-		.page-link {
-			margin: 0 5px;
-			border-radius: 100%;
-		}
-		.chip .c-rounded-1 {
-			border-radius: 10px;
-		}
-		.c-rounded-2 {
-			border-radius: 20px;
-		}
-		.c-rounded-3 {
-			border-radius: 30px;
-		}
-		.text-inherit {
-			color: inherit !important;
-		}
-		.opener {
-			margin: 2.5rem 0 2rem 0;
-			position: relative;
-		}
-		.opener::after {
-			content: "";
-			position: absolute;
-			bottom: -15px;
-			width: 9rem;
-			left: 50%;
-			transform: translateX(-50%);
-			height: 5px;
-			background: linear-gradient(to right, goldenrod, aqua);
-			border-radius: 1rem;
-		}
-		.carousel-indicators li {
-			border: 0 !important;
-			border-radius: 100%;
-			height: 1rem !important;
-			width: 1rem !important;
-		}
-	</style>
-
-	<style>
-		.overflowx-scroll {
-			overflow-x: scroll;
-		}
-		.slide {
-			display: none;
-		}
-		.slide img {
-			border-radius: 10px 10px 0 0;
-			width: 100%;
-			height: 35vh;
-			object-fit: cover;
-		}
-		.slide .image-number {
-			font-size: small;
-			border-radius: 10px 0 10px 0;
-			position: absolute;
-			top: 0;
-			left: 0;
-			background-color: rgba(20, 20, 20, 0.8);
-			color: whitesmoke;
-			padding: 0.6rem;
-		}
-
-		.slide-preview {
-			transition: all 0.15s ease-in-out;
-			opacity: 0.6;
-			width: 5rem;
-			height: 4rem;
-			object-fit: cover;
-			cursor: pointer;
-		}
-
-		.active,
-		.slide-preview:hover {
-			opacity: 1;
-		}
-	</style>
-
-	<body>
+	<body class="bg-success">
 		<div class="invisible-items">
 			<div id="preloader"></div>
 
@@ -115,7 +40,7 @@
 					>Browse Accomodation</a
 				>
 				<a href="./about.html">About</a>
-				<a href="./contact">Get In Touch</a>
+				<a href="./contact.html">Get In Touch</a>
 			</div>
 
 			<a href="#" class="back-to-top d-flex align-items-center justify-content-center"
@@ -123,169 +48,198 @@
 			></a>
 		</div>
 
-		<header class="sticky-top d-flex text-white bg-primary">
+		<header class="sticky-top d-flex text-white bg-success">
 			<div class="container">
 				<div class="p-3 d-flex justify-content-between align-items-center">
-					<a href="./index.html" class="text-inherit">
+					<a href="./index.html" id="logo" class="text-inherit mt-2">
 						<h4 class="">
-							<i class="bi bi-house"></i>
-							<span>G</span>ot<span>R</span>ez
+							<i class="bi bi-house-door-fill"></i>
+							<span>O</span>ff<span>-C</span>ampus
 						</h4>
 					</a>
-					<!-- <h4 class="">
-							<span class="text-warning">S</span>tudents<span class="text-warning"
-								>A</span
-							>ccomodation
-						</h4> -->
-					<button id="open-nav" type="button" class="btn btn-light rounded-circle shadow">
+
+					<button
+						id="open-nav"
+						type="button"
+						class="d-lg-none btn btn-light rounded-circle shadow"
+					>
 						<i class="bi bi-list fs-5"></i>
 					</button>
+					<nav class="d-none d-lg-flex align-items-center">
+						<a href="./index.html">Home</a>
+						<a href="./accomodation.html" class="active">Accomodation</a>
+						<a href="./about.html">About</a>
+						<a href="./contact.html">Contact</a>
+					</nav>
 				</div>
 			</div>
 		</header>
 
-		<main class="bg-primary py-4 px-2">
-			<div class="c-rounded-2 py-4 bg-white">
-				<div class="container">
-					<div class="mb-3">
-						<a
-							href="./accomodation.html"
-							class="btn btn-sm px-3 btn-primary rounded-pill"
-						>
-							<i class="bi bi-arrow-left me-2"></i> Go Back
-						</a>
+		<main id="view-slides" class="container py-4 px-2">
+			<div class="c-rounded-2 p-4 p-lg-5 bg-white">
+				<div class="mb-5">
+					<a href="./accomodation.html" class="btn btn-sm px-3 btn-success rounded-pill">
+						<i class="bi bi-arrow-left me-2"></i> Go Back
+					</a>
+				</div>
+
+				<div class="row">
+					<div class="col-lg">
+						<div class="position-relative">
+							<div class="slide">
+								<div class="image-number">1 / 6</div>
+								<img
+									src="./assets/img/boarding-houses/bh1.jpg"
+									style="width: 100%"
+								/>
+							</div>
+
+							<div class="slide">
+								<div class="image-number">2 / 6</div>
+								<img
+									src="./assets/img/boarding-houses/bh2.jpg"
+									style="width: 100%"
+								/>
+							</div>
+
+							<div class="slide">
+								<div class="image-number">3 / 6</div>
+								<img
+									src="./assets/img/boarding-houses/bh3.jpg"
+									style="width: 100%"
+								/>
+							</div>
+
+							<div class="slide">
+								<div class="image-number">4 / 6</div>
+								<img
+									src="./assets/img/boarding-houses/bh4.jpg"
+									style="width: 100%"
+								/>
+							</div>
+
+							<div class="slide">
+								<div class="image-number">5 / 6</div>
+								<img
+									src="./assets/img/boarding-houses/bh5.jpg"
+									style="width: 100%"
+								/>
+							</div>
+
+							<div class="slide">
+								<div class="image-number">6 / 6</div>
+								<img
+									src="./assets/img/boarding-houses/bh6.jpg"
+									style="width: 100%"
+								/>
+							</div>
+
+							<a
+								class="btn btn-dark c-rounded-1 position-absolute top-50 start-0"
+								onclick="plusSlides(-1)"
+								>&#10094;</a
+							>
+							<a
+								class="btn btn-dark c-rounded-1 position-absolute top-50 end-0"
+								onclick="plusSlides(1)"
+								>&#10095;</a
+							>
+						</div>
+
+						<div class="d-flex overflowx-scroll">
+							<div class="pe-1 py-1">
+								<img
+									class="slide-preview"
+									src="./assets/img/boarding-houses/bh1.jpg"
+									onclick="currentSlide(1)"
+								/>
+							</div>
+							<div class="pe-1 py-1">
+								<img
+									class="slide-preview"
+									src="./assets/img/boarding-houses/bh2.jpg"
+									onclick="currentSlide(2)"
+								/>
+							</div>
+							<div class="pe-1 py-1">
+								<img
+									class="slide-preview"
+									src="./assets/img/boarding-houses/bh3.jpg"
+									onclick="currentSlide(3)"
+								/>
+							</div>
+							<div class="pe-1 py-1">
+								<img
+									class="slide-preview"
+									src="./assets/img/boarding-houses/bh4.jpg"
+									onclick="currentSlide(4)"
+								/>
+							</div>
+							<div class="pe-1 py-1">
+								<img
+									class="slide-preview"
+									src="./assets/img/boarding-houses/bh5.jpg"
+									onclick="currentSlide(5)"
+								/>
+							</div>
+							<div class="pe-1 py-1">
+								<img
+									class="slide-preview"
+									src="./assets/img/boarding-houses/bh6.jpg"
+									onclick="currentSlide(6)"
+								/>
+							</div>
+						</div>
 					</div>
 
-					<div class="position-relative">
-						<div class="slide">
-							<div class="image-number">1 / 6</div>
-							<img src="./assets/img/boarding-houses/bh1.jpg" style="width: 100%" />
-						</div>
+					<div class="col-lg">
+						<div class="p-3">
+							<div class="d-flex align-items-start justify-content-between mb-4">
+								<div>
+									<div class="mb-3">
+										<i class="bi bi-geo-alt"></i> Mount Pleasant
+									</div>
+									<div class="mb-3"><i class="bi bi-geo"></i> 5km to UZ</div>
+								</div>
 
-						<div class="slide">
-							<div class="image-number">2 / 6</div>
-							<img src="./assets/img/boarding-houses/bh2.jpg" style="width: 100%" />
-						</div>
-
-						<div class="slide">
-							<div class="image-number">3 / 6</div>
-							<img src="./assets/img/boarding-houses/bh3.jpg" style="width: 100%" />
-						</div>
-
-						<div class="slide">
-							<div class="image-number">4 / 6</div>
-							<img src="./assets/img/boarding-houses/bh4.jpg" style="width: 100%" />
-						</div>
-
-						<div class="slide">
-							<div class="image-number">5 / 6</div>
-							<img src="./assets/img/boarding-houses/bh5.jpg" style="width: 100%" />
-						</div>
-
-						<div class="slide">
-							<div class="image-number">6 / 6</div>
-							<img src="./assets/img/boarding-houses/bh6.jpg" style="width: 100%" />
-						</div>
-
-						<a
-							class="btn btn-dark c-rounded-1 position-absolute top-50 start-0"
-							onclick="plusSlides(-1)"
-							>&#10094;</a
-						>
-						<a
-							class="btn btn-dark c-rounded-1 position-absolute top-50 end-0"
-							onclick="plusSlides(1)"
-							>&#10095;</a
-						>
-					</div>
-
-					<div class="d-flex overflowx-scroll">
-						<div class="pe-1 py-1">
-							<img
-								class="slide-preview"
-								src="./assets/img/boarding-houses/bh1.jpg"
-								onclick="currentSlide(1)"
-							/>
-						</div>
-						<div class="pe-1 py-1">
-							<img
-								class="slide-preview"
-								src="./assets/img/boarding-houses/bh2.jpg"
-								onclick="currentSlide(2)"
-							/>
-						</div>
-						<div class="pe-1 py-1">
-							<img
-								class="slide-preview"
-								src="./assets/img/boarding-houses/bh3.jpg"
-								onclick="currentSlide(3)"
-							/>
-						</div>
-						<div class="pe-1 py-1">
-							<img
-								class="slide-preview"
-								src="./assets/img/boarding-houses/bh4.jpg"
-								onclick="currentSlide(4)"
-							/>
-						</div>
-						<div class="pe-1 py-1">
-							<img
-								class="slide-preview"
-								src="./assets/img/boarding-houses/bh5.jpg"
-								onclick="currentSlide(5)"
-							/>
-						</div>
-						<div class="pe-1 py-1">
-							<img
-								class="slide-preview"
-								src="./assets/img/boarding-houses/bh6.jpg"
-								onclick="currentSlide(6)"
-							/>
-						</div>
-					</div>
-
-					<div class="p-3">
-						<div class="d-flex align-items-start justify-content-between mb-4">
-							<div>
-								<div class="mb-3"><i class="bi bi-geo-alt"></i> Mount Pleasant</div>
-								<div class="mb-3"><i class="bi bi-geo"></i> 5km to UZ</div>
+								<div>
+									<div class="mb-3"><i class="bi bi-person"></i> UZOCA</div>
+									<div class="">
+										<i class="bi bi-currency-dollar"></i> 120/month
+									</div>
+								</div>
 							</div>
 
-							<div>
-								<div class="mb-3"><i class="bi bi-person"></i> UZOCA</div>
-								<div class=""><i class="bi bi-currency-dollar"></i> 120/month</div>
+							<div
+								class="d-flex small justify-content-center align-items-center mb-3 bg-light p-2 c-rounded-1"
+							>
+								<div class="me-3 text-center">Rating</div>
+								<div class="text-warning">
+									<i class="bi bi-star-fill me-1"></i>
+									<i class="bi bi-star-fill me-1"></i>
+									<i class="bi bi-star-fill me-1"></i>
+									<i class="bi bi-star-fill me-1"></i>
+									<i class="bi bi-star"></i>
+								</div>
 							</div>
-						</div>
 
-						<div
-							class="d-flex small justify-content-center align-items-center mb-3 bg-light p-2 c-rounded-1"
-						>
-							<div class="me-3 text-center">Rating</div>
-							<div class="text-warning">
-								<i class="bi bi-star-fill me-1"></i>
-								<i class="bi bi-star-fill me-1"></i>
-								<i class="bi bi-star-fill me-1"></i>
-								<i class="bi bi-star-fill me-1"></i>
-								<i class="bi bi-star"></i>
+							<div class="p-2 bg-light c-rounded-1">
+								Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio
+								omnis itaque magnam nulla tempora officiis aliquam repellat quod,
+								expedita eaque.
+								<br /><br />
+								<div class="mb-2">
+									<i class="bi bi-telephone-fill me-2"></i> +263776658124
+								</div>
+								<div><i class="bi bi-whatsapp me-2"></i> +263778958116 <br /></div>
 							</div>
-						</div>
-
-						<div class="p-2 bg-light c-rounded-1">
-							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio omnis
-							itaque magnam nulla tempora officiis aliquam repellat quod, expedita
-							eaque.
-							<br /><br />
-							<div class="mb-2">
-								<i class="bi bi-telephone-fill me-2"></i> +263776658124
-							</div>
-							<div><i class="bi bi-whatsapp me-2"></i> +263778958116 <br /></div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</main>
 
-		<footer class="p-4 bg-primary text-center text-white">
+		<footer class="p-4 bg-success text-center text-white">
 			<small>&copy;All Rights Reserved. </small>
 		</footer>
 
