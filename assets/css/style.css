@@ -18,7 +18,7 @@
 	right: 15px;
 	bottom: 15px;
 	z-index: 996;
-	background: #0880e8;
+	background: gray;
 	width: 40px;
 	height: 40px;
 	border-radius: 50px;
@@ -30,7 +30,7 @@
 	line-height: 0;
 }
 .back-to-top:hover {
-	background: #2194f7;
+	background: dimgrey;
 	color: #fff;
 }
 .back-to-top.active {
