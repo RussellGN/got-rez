@@ -127,4 +127,35 @@
 			preloader.remove();
 		});
 	}
+
+	// sliders
+	const walkingDistanceSliders = document.querySelectorAll(".walking-distance");
+	const walkingDistanceLabel = document.querySelectorAll("#walking-distance-label");
+
+	if (walkingDistanceSliders.length > 0 && walkingDistanceLabel.length > 0) {
+		console.log(walkingDistanceLabel.length, walkingDistanceSliders.length);
+		walkingDistanceSliders.forEach((slider) => {
+			slider.addEventListener("change", (e) => {
+				if (Number(slider.value) === 50) {
+					slider.nextElementSibling.textContent = "50+ km";
+				} else {
+					slider.nextElementSibling.textContent = slider.value + " km";
+				}
+			});
+		});
+	}
+
+	// mobile filters
+	const mobileFilters = select("#mobile-filters");
+	const openFilters = select("#open-filters");
+	const closeFilters = select("#close-filters");
+
+	if (mobileFilters && openFilters && closeFilters) {
+		openFilters.addEventListener("click", (e) => {
+			mobileFilters.classList.add("show");
+		});
+		closeFilters.addEventListener("click", (e) => {
+			mobileFilters.classList.remove("show");
+		});
+	}
 })();

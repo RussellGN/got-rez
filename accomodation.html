@@ -78,18 +78,144 @@
 		<main class="container py-4 px-2">
 			<div class="row">
 				<div id="sidebar" class="col-3 d-none d-lg-block">
-					<div
-						class="c-rounded-2 py-4 bg-white d-flex justify-content-center align-items-center text-center"
-						style="min-height: 75vh"
-					>
-						Under Construction
+					<div class="c-rounded-2 p-4 bg-white" style="min-height: 75vh">
+						<h2 class="px-3">Filters</h2>
+
+						<div
+							id="chips"
+							class="my-3 pb-2 d-flex overflow-auto gap-2 align-items-center"
+						>
+							<div
+								class="chip border text-nowrap bg-light rounded-pill mx-1 small px-2"
+							>
+								<i class="bi bi-x-circle me-1"></i> UZ
+							</div>
+
+							<div
+								class="chip border text-nowrap bg-light rounded-pill mx-1 small px-2"
+							>
+								<i class="bi bi-x-circle me-1"></i> 5km
+							</div>
+
+							<div
+								class="chip border text-nowrap bg-light rounded-pill mx-1 small px-2"
+							>
+								<i class="bi bi-x-circle me-1"></i> $ 0-100
+							</div>
+
+							<div
+								class="chip border text-nowrap bg-light rounded-pill mx-1 small px-2"
+							>
+								<i class="bi bi-x-circle me-1"></i> Apartment
+							</div>
+
+							<div
+								class="chip border text-nowrap bg-light rounded-pill mx-1 small px-2"
+							>
+								<i class="bi bi-x-circle me-1"></i> Boarding House
+							</div>
+
+							<div
+								class="chip border text-nowrap bg-light rounded-pill mx-1 small px-2"
+							>
+								<i class="bi bi-x-circle me-1"></i> Cottage
+							</div>
+						</div>
+
+						<div class="bg-light c-rounded-1 p-3 mb-3">
+							<h5>Nearest Institution</h5>
+
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" checked />
+								<label class="form-check-label"> UZ </label>
+							</div>
+
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" />
+								<label class="form-check-label"> HIT </label>
+							</div>
+
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" />
+								<label class="form-check-label"> MSU Harare </label>
+							</div>
+						</div>
+
+						<div class="bg-light c-rounded-1 p-3 mb-3">
+							<h5>Walking Distance</h5>
+
+							<div class="d-flex">
+								<input
+									class="walking-distance"
+									value="5"
+									max="50"
+									min="0"
+									step="5"
+									type="range"
+								/>
+								<label id="walking-distance-label" class="ms-2 text-nowrap"
+									>5 km</label
+								>
+							</div>
+						</div>
+
+						<div class="bg-light c-rounded-1 p-3 mb-3">
+							<h5>Rent (monthly)</h5>
+
+							<div class="form-check">
+								<input class="form-check-input" type="radio" name="cost" checked />
+								<label class="form-check-label"> $ 0-100 </label>
+							</div>
+
+							<div class="form-check">
+								<input class="form-check-input" type="radio" name="cost" />
+								<label class="form-check-label"> $ 100-150 </label>
+							</div>
+
+							<div class="form-check">
+								<input class="form-check-input" type="radio" name="cost" />
+								<label class="form-check-label"> $ 150-200 </label>
+							</div>
+
+							<div class="form-check">
+								<input class="form-check-input" type="radio" name="cost" />
+								<label class="form-check-label"> $ 200+ </label>
+							</div>
+						</div>
+
+						<div class="bg-light c-rounded-1 p-3 mb-3">
+							<h5>Type</h5>
+
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" checked />
+								<label class="form-check-label"> Apartment </label>
+							</div>
+
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" checked />
+								<label class="form-check-label"> Boarding House</label>
+							</div>
+
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" />
+								<label class="form-check-label"> Cottage </label>
+							</div>
+						</div>
+
+						<a
+							href="./contact.html"
+							class="text-success text-decoration-underline text-center w-100 d-block"
+							>Suggest filters</a
+						>
 					</div>
 				</div>
 
 				<div id="content" class="col">
 					<div class="bg-white shadow-lg c-rounded-2 p-4 p-lg-5">
 						<div id="controls">
-							<div class="d-none d-lg-flex justify-content-between">
+							<div
+								class="d-none d-lg-flex justify-content-between align-items-center"
+							>
 								<input
 									id="search-bar"
 									type="search"
@@ -98,7 +224,20 @@
 									name="q"
 								/>
 
-								<div class="ms-5 d-flex rounded-pill border bg-light px-4 py-2">
+								<div class="ms-5 d-flex align-items-center">
+									<label
+										class="d-flex align-items-center justify-content-center pe-2"
+										>Sort</label
+									>
+									<select class="form-select cursor bg-light w-fit" name="" id="">
+										<option selected>Newest</option>
+										<option value="">Oldest</option>
+										<option value="">Price &DownArrow;</option>
+										<option value="">Price &UpArrow;</option>
+									</select>
+								</div>
+
+								<!-- <div class="ms-5 d-flex rounded-pill border bg-light px-4 py-2">
 									<label
 										class="d-flex align-items-center justify-content-center pe-2"
 										>Sort</label
@@ -109,7 +248,7 @@
 										<option value="">Price &DownArrow;</option>
 										<option value="">Price &UpArrow;</option>
 									</select>
-								</div>
+								</div> -->
 							</div>
 
 							<div class="my-4 d-lg-none">
@@ -122,7 +261,7 @@
 								/>
 
 								<div class="mb-4 d-flex align-items-center justify-content-between">
-									<div class="d-flex c-rounded-1 border bg-light px-3 py-1">
+									<!-- <div class="d-flex c-rounded-1 border bg-light px-3 py-1">
 										<label
 											class="d-flex align-items-center justify-content-center pe-2"
 											>Sort</label
@@ -137,80 +276,263 @@
 											<option value="">Price &DownArrow;</option>
 											<option value="">Price &UpArrow;</option>
 										</select>
+									</div> -->
+
+									<div class="d-flex align-items-center">
+										<label
+											class="d-flex align-items-center justify-content-center pe-2"
+											>Sort</label
+										>
+										<select
+											class="form-select cursor bg-light w-fit"
+											name=""
+											id=""
+										>
+											<option selected>Newest</option>
+											<option value="">Oldest</option>
+											<option value="">Price &DownArrow;</option>
+											<option value="">Price &UpArrow;</option>
+										</select>
 									</div>
 
-									<button class="btn btn-success px-3 rounded-pill">
+									<button
+										id="open-filters"
+										class="btn btn-success px-3 rounded-pill"
+									>
 										<i class="bi bi-funnel-fill me-2"></i>Filters
 									</button>
+
+									<div
+										id="mobile-filters"
+										class="position-fixed top-0 start-0 w-100 h-100 overflow-auto p-4 bg-white"
+									>
+										<div
+											class="px-3 d-flex align-items-center justify-content-between"
+										>
+											<h2 class="">Filters</h2>
+											<button id="close-filters" class="btn rounded-circle">
+												<i class="bi bi-x-circle fs-2"></i>
+											</button>
+										</div>
+
+										<div
+											id="chips"
+											class="my-3 pb-2 d-flex overflow-auto gap-2 align-items-center"
+										>
+											<div
+												class="chip border text-nowrap bg-light rounded-pill mx-1 small px-2"
+											>
+												<i class="bi bi-x-circle me-1"></i> UZ
+											</div>
+
+											<div
+												class="chip border text-nowrap bg-light rounded-pill mx-1 small px-2"
+											>
+												<i class="bi bi-x-circle me-1"></i> 5km
+											</div>
+
+											<div
+												class="chip border text-nowrap bg-light rounded-pill mx-1 small px-2"
+											>
+												<i class="bi bi-x-circle me-1"></i> $ 0-100
+											</div>
+
+											<div
+												class="chip border text-nowrap bg-light rounded-pill mx-1 small px-2"
+											>
+												<i class="bi bi-x-circle me-1"></i> Apartment
+											</div>
+
+											<div
+												class="chip border text-nowrap bg-light rounded-pill mx-1 small px-2"
+											>
+												<i class="bi bi-x-circle me-1"></i> Boarding House
+											</div>
+
+											<div
+												class="chip border text-nowrap bg-light rounded-pill mx-1 small px-2"
+											>
+												<i class="bi bi-x-circle me-1"></i> Cottage
+											</div>
+										</div>
+
+										<div class="bg-light c-rounded-1 p-3 mb-3">
+											<h4>Nearest Institution</h4>
+
+											<div class="form-check">
+												<input
+													class="form-check-input"
+													type="checkbox"
+													checked
+												/>
+												<label class="form-check-label"> UZ </label>
+											</div>
+
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" />
+												<label class="form-check-label"> HIT </label>
+											</div>
+
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" />
+												<label class="form-check-label"> MSU Harare </label>
+											</div>
+										</div>
+
+										<div class="bg-light c-rounded-1 p-3 mb-3">
+											<h4>Walking Distance</h4>
+
+											<div class="d-flex">
+												<input
+													class="walking-distance flex-fill"
+													value="5"
+													max="50"
+													min="0"
+													step="5"
+													type="range"
+												/>
+												<label
+													id="walking-distance-label"
+													class="ms-2 text-nowrap"
+													>5 km</label
+												>
+											</div>
+										</div>
+
+										<div class="bg-light c-rounded-1 p-3 mb-3">
+											<h4>Rent (monthly)</h4>
+
+											<div class="form-check">
+												<input
+													class="form-check-input"
+													type="radio"
+													name="cost"
+													checked
+												/>
+												<label class="form-check-label"> $ 0-100 </label>
+											</div>
+
+											<div class="form-check">
+												<input
+													class="form-check-input"
+													type="radio"
+													name="cost"
+												/>
+												<label class="form-check-label"> $ 100-150 </label>
+											</div>
+
+											<div class="form-check">
+												<input
+													class="form-check-input"
+													type="radio"
+													name="cost"
+												/>
+												<label class="form-check-label"> $ 150-200 </label>
+											</div>
+
+											<div class="form-check">
+												<input
+													class="form-check-input"
+													type="radio"
+													name="cost"
+												/>
+												<label class="form-check-label"> $ 200+ </label>
+											</div>
+										</div>
+
+										<div class="bg-light c-rounded-1 p-3 mb-3">
+											<h4>Type</h4>
+
+											<div class="form-check">
+												<input
+													class="form-check-input"
+													type="checkbox"
+													checked
+												/>
+												<label class="form-check-label"> Apartment </label>
+											</div>
+
+											<div class="form-check">
+												<input
+													class="form-check-input"
+													type="checkbox"
+													checked
+												/>
+												<label class="form-check-label">
+													Boarding House</label
+												>
+											</div>
+
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" />
+												<label class="form-check-label"> Cottage </label>
+											</div>
+										</div>
+
+										<a
+											href="./contact.html"
+											class="text-success text-decoration-underline text-center w-100 d-block"
+											>Suggest filters</a
+										>
+									</div>
 								</div>
-
-								<!-- <div id="chips" class="d-flex flex-wrap gap-2 align-items-center">
-									<div class="chip bg-light rounded-pill mx-1 small py-1 px-3">
-										<i class="bi bi-x-circle me-1"></i> UZ
-									</div>
-
-									<div class="chip bg-light rounded-pill mx-1 small py-1 px-3">
-										<i class="bi bi-x-circle me-1"></i> 5km
-									</div>
-
-									<div class="chip bg-light rounded-pill mx-1 small py-1 px-3">
-										<i class="bi bi-x-circle me-1"></i> Boarding House
-									</div>
-								</div> -->
 							</div>
 						</div>
 
 						<div id="Listings" class="my-5">
-							<h3 class="text-center mb-4">All listings</h3>
+							<h3 class="text-center mb-4">All Accomodation</h3>
 
-							<div class="mb-5 border bg-light c-rounded-2 overflow-hidden">
+							<div class="mb-5 border bg-light c-rounded-2 p-lg-4 overflow-hidden">
 								<div class="d-lg-flex align-items-center">
-									<div class="col-lg h-100 p-0">
-										<div class="d-flex h-100">
-											<div class="w-50">
+									<div class="col-lg-6 c-rounded-lg-1 overflow-hidden d-flex p-0">
+										<div class="w-50">
+											<img
+												src="./assets/img/boarding-houses/bh4.jpg"
+												class="h-100 w-100 object-fit-cover border-end border-light"
+											/>
+										</div>
+
+										<div class="w-50 d-flex flex-wrap">
+											<div class="col-6 p-0">
 												<img
-													src="./assets/img/boarding-houses/bh4.jpg"
-													class="h-100 w-100 object-fit-cover border-end border-light"
+													src="./assets/img/boarding-houses/bh9.jpg"
+													class="h-100 w-100 border-end border-bottom border-light object-fit-cover"
 												/>
 											</div>
 
-											<div class="w-50 d-flex flex-wrap h-100">
-												<div class="col-6 p-0">
-													<img
-														src="./assets/img/boarding-houses/bh9.jpg"
-														class="h-100 w-100 border-end border-bottom border-light object-fit-cover"
-													/>
-												</div>
+											<div class="col-6 p-0">
+												<img
+													src="./assets/img/boarding-houses/bh6.jpg"
+													class="h-100 w-100 border-bottom border-light object-fit-cover"
+												/>
+											</div>
 
-												<div class="col-6 p-0">
-													<img
-														src="./assets/img/boarding-houses/bh6.jpg"
-														class="h-100 w-100 border-bottom border-light object-fit-cover"
-													/>
-												</div>
+											<div class="col-6 p-0">
+												<img
+													src="./assets/img/boarding-houses/bh7.jpg"
+													class="h-100 w-100 border-end border-light object-fit-cover"
+												/>
+											</div>
 
-												<div class="col-6 p-0">
-													<img
-														src="./assets/img/boarding-houses/bh7.jpg"
-														class="h-100 w-100 border-end border-light object-fit-cover"
-													/>
-												</div>
-
-												<div class="col-6 p-0">
-													<img
-														src="./assets/img/boarding-houses/bh10.jpg"
-														class="h-100 w-100 object-fit-cover"
-													/>
-												</div>
+											<div class="col-6 p-0">
+												<img
+													src="./assets/img/boarding-houses/bh10.jpg"
+													class="h-100 w-100 object-fit-cover"
+												/>
 											</div>
 										</div>
 									</div>
 
-									<div class="col-lg p-3">
+									<div class="col-lg-6 p-3 p-lg-0 ps-lg-4">
 										<div
 											class="d-flex d-lg-block align-items-start align-items-lg-stretch justify-content-between"
 										>
 											<div class="mb-lg-3">
+												<h4
+													class="mb-3 text-nowrap w-100 text-ellipsis overflow-hidden"
+												>
+													Ladies accomodation
+												</h4>
 												<div class="mb-3">
 													<i class="bi bi-geo-alt"></i> Mount Pleasant
 												</div>
@@ -223,7 +545,7 @@
 											</div>
 
 											<div
-												class="d-lg-flex align-items-center justify-content-between"
+												class="d-flex align-items-center justify-content-between"
 											>
 												<a
 													href="./view.html"
@@ -232,7 +554,7 @@
 												>
 												<a
 													href="./profile.html"
-													class="d-none text-success text-decoration-underline d-lg-inline"
+													class="d-none text-decoration-underline text-success d-lg-inline"
 													>UZOCA</a
 												>
 											</div>
@@ -241,54 +563,57 @@
 								</div>
 							</div>
 
-							<div class="mb-5 border bg-light c-rounded-2 overflow-hidden">
+							<div class="mb-5 border bg-light c-rounded-2 p-lg-4 overflow-hidden">
 								<div class="d-lg-flex align-items-center">
-									<div class="col-lg h-100 p-0">
-										<div class="d-flex h-100">
-											<div class="w-50">
+									<div class="col-lg-6 c-rounded-lg-1 overflow-hidden d-flex p-0">
+										<div class="w-50">
+											<img
+												src="./assets/img/boarding-houses/bh4.jpg"
+												class="h-100 w-100 object-fit-cover border-end border-light"
+											/>
+										</div>
+
+										<div class="w-50 d-flex flex-wrap">
+											<div class="col-6 p-0">
 												<img
-													src="./assets/img/boarding-houses/bh4.jpg"
-													class="h-100 w-100 object-fit-cover border-end border-light"
+													src="./assets/img/boarding-houses/bh9.jpg"
+													class="h-100 w-100 border-end border-bottom border-light object-fit-cover"
 												/>
 											</div>
 
-											<div class="w-50 d-flex flex-wrap h-100">
-												<div class="col-6 p-0">
-													<img
-														src="./assets/img/boarding-houses/bh9.jpg"
-														class="h-100 w-100 border-end border-bottom border-light object-fit-cover"
-													/>
-												</div>
+											<div class="col-6 p-0">
+												<img
+													src="./assets/img/boarding-houses/bh6.jpg"
+													class="h-100 w-100 border-bottom border-light object-fit-cover"
+												/>
+											</div>
 
-												<div class="col-6 p-0">
-													<img
-														src="./assets/img/boarding-houses/bh6.jpg"
-														class="h-100 w-100 border-bottom border-light object-fit-cover"
-													/>
-												</div>
+											<div class="col-6 p-0">
+												<img
+													src="./assets/img/boarding-houses/bh7.jpg"
+													class="h-100 w-100 border-end border-light object-fit-cover"
+												/>
+											</div>
 
-												<div class="col-6 p-0">
-													<img
-														src="./assets/img/boarding-houses/bh7.jpg"
-														class="h-100 w-100 border-end border-light object-fit-cover"
-													/>
-												</div>
-
-												<div class="col-6 p-0">
-													<img
-														src="./assets/img/boarding-houses/bh10.jpg"
-														class="h-100 w-100 object-fit-cover"
-													/>
-												</div>
+											<div class="col-6 p-0">
+												<img
+													src="./assets/img/boarding-houses/bh10.jpg"
+													class="h-100 w-100 object-fit-cover"
+												/>
 											</div>
 										</div>
 									</div>
 
-									<div class="col-lg p-3">
+									<div class="col-lg-6 p-3 p-lg-0 ps-lg-4">
 										<div
 											class="d-flex d-lg-block align-items-start align-items-lg-stretch justify-content-between"
 										>
 											<div class="mb-lg-3">
+												<h4
+													class="mb-3 text-nowrap w-100 text-ellipsis overflow-hidden"
+												>
+													Ladies accomodation
+												</h4>
 												<div class="mb-3">
 													<i class="bi bi-geo-alt"></i> Mount Pleasant
 												</div>
@@ -301,7 +626,7 @@
 											</div>
 
 											<div
-												class="d-lg-flex align-items-center justify-content-between"
+												class="d-flex align-items-center justify-content-between"
 											>
 												<a
 													href="./view.html"
@@ -310,7 +635,7 @@
 												>
 												<a
 													href="./profile.html"
-													class="d-none text-success text-decoration-underline d-lg-inline"
+													class="d-none text-decoration-underline text-success d-lg-inline"
 													>UZOCA</a
 												>
 											</div>
@@ -319,54 +644,57 @@
 								</div>
 							</div>
 
-							<div class="mb-5 border bg-light c-rounded-2 overflow-hidden">
+							<div class="mb-5 border bg-light c-rounded-2 p-lg-4 overflow-hidden">
 								<div class="d-lg-flex align-items-center">
-									<div class="col-lg h-100 p-0">
-										<div class="d-flex h-100">
-											<div class="w-50">
+									<div class="col-lg-6 c-rounded-lg-1 overflow-hidden d-flex p-0">
+										<div class="w-50">
+											<img
+												src="./assets/img/boarding-houses/bh4.jpg"
+												class="h-100 w-100 object-fit-cover border-end border-light"
+											/>
+										</div>
+
+										<div class="w-50 d-flex flex-wrap">
+											<div class="col-6 p-0">
 												<img
-													src="./assets/img/boarding-houses/bh4.jpg"
-													class="h-100 w-100 object-fit-cover border-end border-light"
+													src="./assets/img/boarding-houses/bh9.jpg"
+													class="h-100 w-100 border-end border-bottom border-light object-fit-cover"
 												/>
 											</div>
 
-											<div class="w-50 d-flex flex-wrap h-100">
-												<div class="col-6 p-0">
-													<img
-														src="./assets/img/boarding-houses/bh9.jpg"
-														class="h-100 w-100 border-end border-bottom border-light object-fit-cover"
-													/>
-												</div>
+											<div class="col-6 p-0">
+												<img
+													src="./assets/img/boarding-houses/bh6.jpg"
+													class="h-100 w-100 border-bottom border-light object-fit-cover"
+												/>
+											</div>
 
-												<div class="col-6 p-0">
-													<img
-														src="./assets/img/boarding-houses/bh6.jpg"
-														class="h-100 w-100 border-bottom border-light object-fit-cover"
-													/>
-												</div>
+											<div class="col-6 p-0">
+												<img
+													src="./assets/img/boarding-houses/bh7.jpg"
+													class="h-100 w-100 border-end border-light object-fit-cover"
+												/>
+											</div>
 
-												<div class="col-6 p-0">
-													<img
-														src="./assets/img/boarding-houses/bh7.jpg"
-														class="h-100 w-100 border-end border-light object-fit-cover"
-													/>
-												</div>
-
-												<div class="col-6 p-0">
-													<img
-														src="./assets/img/boarding-houses/bh10.jpg"
-														class="h-100 w-100 object-fit-cover"
-													/>
-												</div>
+											<div class="col-6 p-0">
+												<img
+													src="./assets/img/boarding-houses/bh10.jpg"
+													class="h-100 w-100 object-fit-cover"
+												/>
 											</div>
 										</div>
 									</div>
 
-									<div class="col-lg p-3">
+									<div class="col-lg-6 p-3 p-lg-0 ps-lg-4">
 										<div
 											class="d-flex d-lg-block align-items-start align-items-lg-stretch justify-content-between"
 										>
 											<div class="mb-lg-3">
+												<h4
+													class="mb-3 text-nowrap w-100 text-ellipsis overflow-hidden"
+												>
+													Ladies accomodation
+												</h4>
 												<div class="mb-3">
 													<i class="bi bi-geo-alt"></i> Mount Pleasant
 												</div>
@@ -379,7 +707,7 @@
 											</div>
 
 											<div
-												class="d-lg-flex align-items-center justify-content-between"
+												class="d-flex align-items-center justify-content-between"
 											>
 												<a
 													href="./view.html"
@@ -388,7 +716,7 @@
 												>
 												<a
 													href="./profile.html"
-													class="d-none text-success text-decoration-underline d-lg-inline"
+													class="d-none text-decoration-underline text-success d-lg-inline"
 													>UZOCA</a
 												>
 											</div>

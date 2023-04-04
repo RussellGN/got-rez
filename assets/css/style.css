@@ -1,6 +1,6 @@
 ::-webkit-scrollbar {
 	width: 10px;
-	height: 10px;
+	height: 8px;
 }
 ::-webkit-scrollbar-track {
 	background-color: black;
@@ -327,7 +327,7 @@ header nav a:hover::after {
 }
 
 .overflowx-scroll {
-	overflow-x: scroll;
+	overflow-x: auto;
 }
 #view-slides .slide {
 	display: none;
@@ -361,4 +361,25 @@ header nav a:hover::after {
 #view-slides .active,
 #view-slides .slide-preview:hover {
 	opacity: 1;
+}
+#mobile-filters {
+	z-index: 10000000000;
+	transition: all 0.2s;
+	transform: translateY(100%);
+	opacity: 0;
+}
+
+#mobile-filters.show {
+	transform: translateY(0);
+	opacity: 1;
+}
+
+@media screen and (min-width: 991px) {
+	.c-rounded-lg-1 {
+		border-radius: 10px !important;
+	}
+}
+
+.text-ellipsis {
+	text-overflow: ellipsis;
 }
